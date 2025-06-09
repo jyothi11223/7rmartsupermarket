@@ -12,6 +12,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import constant.Constant;
+import utilities.FileUploadUtility;
+import utilities.PageUtility;
+
 public class ManageCategoryPage {
 	public WebDriver driver;
 	public ManageCategoryPage(WebDriver driver) {
@@ -46,7 +50,9 @@ public class ManageCategoryPage {
 	}
 	public ManageCategoryPage choosefile() throws AWTException
 	{
-		Actions actions=new Actions(driver);
+		PageUtility pageutility=new PageUtility();
+		pageutility.click(driver, choosefile);
+		/*Actions actions=new Actions(driver);
 		actions.click(choosefile).build().perform();
 		
 		StringSelection stringselection=new StringSelection("\"C:\\Users\\jyoth\\Downloads\\Bottle.jpg\"");
@@ -63,12 +69,19 @@ public class ManageCategoryPage {
 		
 		robot.keyPress(KeyEvent.VK_ENTER); 
 		robot.keyRelease(KeyEvent.VK_ENTER);
+		return this;*/
+		String filepath=Constant.TESTIMAGEFILE;
+		FileUploadUtility fileuploadutility=new FileUploadUtility();
+		fileuploadutility.fileuploadUsingRobertClass(choosefile, filepath);
 		return this;
+		
 	}
 	public ManageCategoryPage save()
 	{
-		Actions actions=new Actions(driver);
-		actions.click(save).build().perform();
+		PageUtility pageutility=new PageUtility();
+		pageutility.click(driver, save);
+		/*Actions actions=new Actions(driver);
+		actions.click(save).build().perform();*/
 		return this;
 	}
 	public boolean alert()

@@ -12,7 +12,7 @@ public class ManageContactTest extends Base{
 	ManageContactPage managecontactpage;
 	HomePage homepage;
 	@Test(description="Verify whether the user is able to add new contact information to the manage contact page")
-	public void manageContactTest()
+	public void verifyWhetherTheUserIsAbleToAddNewContact()
 	{
 		String name="admin";
 		String password="admin";
@@ -22,7 +22,7 @@ public class ManageContactTest extends Base{
 		//loginpage.enterThePassword(password);
 		homepage=loginpage.clickTheSignInButton();
 		//ManageContactPage managecontactpage=new ManageContactPage(driver);
-		String mail="varsha1234@gmail.com";
+		String mail="jyothipta1993@gmail.com";
 		String phone="1234567890";
 		String address="abc,kzm,tvm";
 		String dtime="5";

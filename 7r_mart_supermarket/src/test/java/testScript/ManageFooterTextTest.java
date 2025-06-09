@@ -12,7 +12,7 @@ public class ManageFooterTextTest extends Base{
 	ManageFooterText managefootertextpage;
 	HomePage homepage;
 @Test(description="Verify whether the user is able to add new information to the manage footer page")
-public void ManageFooterTest()
+public void verifyWhetherTheUserIsAbleToAddNewInformation()
 {
 	String name="admin";
 	String password="admin";
@@ -34,7 +34,7 @@ public void ManageFooterTest()
 }
 
 @Test
-public void isUpdateButtonDisplayed()
+public void verifyWhetherTheUpdateButtonIsDisplayedSuccessfully()
 {
 	String name="admin";
 	String password="admin";

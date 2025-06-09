@@ -14,7 +14,7 @@ public class ManageCategoryTest extends Base{
 	ManageCategoryPage managecategorypage;
 	HomePage homepage;
 	@Test(description="Verify whether the user is able to add new category to the manage category page")
-	public void manageCategoryTest() throws AWTException
+	public void verifyWhetherTheUserIsAbleToAddNewCategory() throws AWTException
 	{
 		String name="admin";
 		String password="admin";

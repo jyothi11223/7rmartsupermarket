@@ -7,7 +7,7 @@ import Pages.HomePage;
 
 public class HomeTest extends Base{
 	@Test
-	public void logouttest()
+	public void verifyWhetherTheUserIsAbleToLogout()
 	{
 		String name="admin";
 		String password="admin";

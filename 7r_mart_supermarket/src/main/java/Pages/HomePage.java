@@ -6,6 +6,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.PageUtility;
+
 public class HomePage {
 	public WebDriver driver;
 	public HomePage(WebDriver driver) {
@@ -47,8 +49,10 @@ public class HomePage {
 
 	public void userlogo()
 	{
-		Actions actions=new Actions(driver);
-		actions.click(userlogo).build().perform();
+		PageUtility pageutility=new PageUtility();
+		pageutility.click(driver, userlogo);
+		/*Actions actions=new Actions(driver);
+		actions.click(userlogo).build().perform();*/
 		//userlogo.click();
 		//Select select=new Select(userlogo);
 		//select.selectByVisibleText("Logout");

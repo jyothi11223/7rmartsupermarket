@@ -7,6 +7,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.PageUtility;
+
 public class ManageContactPage {
 public WebDriver driver;
 public ManageContactPage(WebDriver driver)
@@ -74,8 +76,10 @@ public ManageContactPage update()
 	//js.executeScript("arguments[0].click();","update");
 	//WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 	//wait.until(ExpectedConditions.elementToBeClickable(update));
-	Actions actions=new Actions(driver);
-	actions.click(update).build().perform();
+	PageUtility pageutility=new PageUtility();
+	pageutility.click(driver, update);
+	/*Actions actions=new Actions(driver);
+	actions.click(update).build().perform();*/
 	//update.click();
 	return this;
 }

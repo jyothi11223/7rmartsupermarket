@@ -14,7 +14,7 @@ public class ManageNewsTest extends Base {
 	HomePage homepage;
 @Test(description="Verify whether the user is able to add new news information to the manage news page successfully")
 
-public void manageNewsTest()
+public void verifyWhetherTheUserIsAbleToAddNewNewsInformation()
 {
 	String username="admin";
 	String password="admin";
@@ -36,7 +36,7 @@ public void manageNewsTest()
 }
 	
 @Test
-public void manageNewsTest1()
+public void verifyWhetherTheSaveButtonIsDisplayedSuccessfully()
 {
 	String username="admin";
 	String password="admin";
@@ -52,8 +52,8 @@ public void manageNewsTest1()
 	/*manage.newMethod();
 	manage.isSaveButtonDisplayed();*/
 }
-@Test
-public void manageNewsTest2()
+@Test(description="Verify whether the user is able to delete  news information from manage news page successfully")
+public void verifyWhetherTheUserIsAbleToDeleteNewsInformationSuccessfully()
 {
 	String username="admin";
 	String password="admin";
