@@ -7,13 +7,15 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testScript.ManageContactTest">
+      <class name="testScript.ManageNewsTest">
         <methods>
+          <include name="verifyWhetherTheUserIsAbleToAddNewNewsInformation"/>
           <include name="browserQuit"/>
           <include name="browserIntialization"/>
-          <include name="verifyWhetherTheUserIsAbleToAddNewContact"/>
+          <include name="verifyWhetherTheSaveButtonIsDisplayedSuccessfully"/>
+          <include name="verifyWhetherTheUserIsAbleToDeleteNewsInformationSuccessfully"/>
         </methods>
-      </class> <!-- testScript.ManageContactTest -->
+      </class> <!-- testScript.ManageNewsTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

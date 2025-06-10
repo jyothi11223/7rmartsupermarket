@@ -30,6 +30,8 @@ public class HomePage {
 	WebElement moreinfomanagenews;
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and contains(@class,'small-box-footer')]")
 	WebElement moreinfoadminuser;
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+	WebElement alert;
 
 	public ManageContactPage moreinfoManageContact() {
 		moreinfomanagecontact.click();
@@ -71,5 +73,7 @@ public class HomePage {
 	public void logout() {
 		logout.click();
 	}
-
+	public boolean isAlertDisplayed() {
+		return alert.isDisplayed();
+	}
 }

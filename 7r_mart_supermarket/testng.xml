@@ -15,7 +15,7 @@
       <class name="testScript.ManageNewsTest"/>  
       <class name="testScript.ManageFooterTextTest"/> 
       <class name="testScript.ManageCategoryTest"/>  -->
-      <class name="testScript.ManageContactTest">
+      <class name="testScript.ManageNewsTest">
       
       </class>
     </classes>

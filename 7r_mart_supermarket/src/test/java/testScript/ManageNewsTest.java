@@ -28,7 +28,8 @@ public void verifyWhetherTheUserIsAbleToAddNewNewsInformation() throws IOExcepti
 	homepage=loginpage.clickTheSignInButton();
 	
 	//ManageNewsPage manage=new ManageNewsPage(driver);
-	String news="Have a nice day";
+	String news=ExcelUtility.getStringData(1, 0, "managenews");
+	//String news="Have a nice day";
 	managenewspage=homepage.moreinfomanagenews();
 	managenewspage.newMethod().textFieldMethod(news).save();
 	/*manage.textFieldMethod(news);
@@ -54,6 +55,8 @@ public void verifyWhetherTheSaveButtonIsDisplayedSuccessfully() throws IOExcepti
 	managenewspage.newMethod().isSaveButtonDisplayed();
 	/*manage.newMethod();
 	manage.isSaveButtonDisplayed();*/
+	boolean isalertavailable=managenewspage.isAlertDisplayed();
+	Assert.assertTrue(isalertavailable);
 }
 @Test(description="Verify whether the user is able to delete  news information from manage news page successfully")
 public void verifyWhetherTheUserIsAbleToDeleteNewsInformationSuccessfully() throws IOException

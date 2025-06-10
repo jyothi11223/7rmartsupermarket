@@ -27,9 +27,10 @@ public class ManageCategoryTest extends Base{
 		loginpage.enterTheUsername(username).enterThePassword(password);
 		//loginpage.enterThePassword(password);
 		homepage=loginpage.clickTheSignInButton();
-		
+		String enterproduct=ExcelUtility.getStringData(1, 0, "managecategory");
 		ManageCategoryPage managecategorypage=new ManageCategoryPage(driver);
-		managecategorypage=homepage.moreinfoManageCategory().newbutton().category().selectgroup().choosefile().save();
+		managecategorypage=homepage.moreinfoManageCategory().newbutton().category(enterproduct).selectgroup().choosefile().save();
+		
 		//managecategorypage.newbutton();
 		//managecategorypage.category();
 		//managecategorypage.selectgroup();

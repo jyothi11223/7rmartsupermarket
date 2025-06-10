@@ -29,7 +29,7 @@ public class ManageCategoryPage {
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']")
 	WebElement newbutton;
 	@FindBy(xpath = "//input[@id='category']")
-	WebElement category;
+	WebElement entercategory;
 	@FindBy(xpath = "//li[@id='134-selectable']")
 	WebElement selectgroup;
 	@FindBy(xpath = "//input[@id='main_img']")
@@ -48,8 +48,10 @@ public class ManageCategoryPage {
 		return this;
 	}
 
-	public ManageCategoryPage category() {
-		category.sendKeys("Shoes");
+	public ManageCategoryPage category(String enterproduct) {
+		//category.sendKeys("Shoes");
+		entercategory.clear();
+		entercategory.sendKeys(enterproduct);
 		return this;
 	}
 

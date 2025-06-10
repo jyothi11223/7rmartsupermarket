@@ -54,7 +54,7 @@ public class ManageFooterText {
 	public ManageFooterText phone(String phone) {
 		enterphone.clear();
 		//enterphone.sendKeys("9074079628");
-		enteraddress.sendKeys(phone);
+		enterphone.sendKeys(phone);
 		return this;
 	}
 
